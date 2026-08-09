@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manas Pandey | Student Portfolio</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+ font-family:Arial,sans-serif;color:#fff;
+ background:#07111f;overflow-x:hidden
+}
+body:before{
+ content:"";position:fixed;inset:0;z-index:-2;
+ background:
+ radial-gradient(circle at 10% 20%,#164e8a55,transparent 30%),
+ radial-gradient(circle at 90% 10%,#7c3aed44,transparent 30%),
+ radial-gradient(circle at 50% 90%,#06b6d433,transparent 35%);
+}
+nav{
+ position:fixed;top:0;width:100%;z-index:10;
+ padding:15px 6%;display:flex;justify-content:space-between;
+ align-items:center;background:#07111fcc;backdrop-filter:blur(15px)
+}
+.logo{font-size:22px;font-weight:bold;color:#67e8f9}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+nav a:hover{color:#67e8f9}
+
+.hero{
+ min-height:100vh;display:flex;align-items:center;
+ justify-content:center;text-align:center;padding:100px 20px 50px;
+}
+.hero-box{max-width:850px;animation:up 1s ease}
+.avatar{
+ width:125px;height:125px;margin:auto auto 20px;
+ border-radius:50%;display:grid;place-items:center;
+ font-size:55px;background:linear-gradient(135deg,#22d3ee,#8b5cf6);
+ box-shadow:0 0 45px #22d3ee66;
+}
+h1{font-size:clamp(42px,9vw,80px);line-height:1}
+h1 span{color:#67e8f9}
+.hero p{font-size:18px;color:#cbd5e1;margin:20px auto;max-width:650px}
+.btn{
+ display:inline-block;padding:13px 22px;border-radius:30px;
+ background:linear-gradient(90deg,#06b6d4,#7c3aed);
+ color:white;text-decoration:none;font-weight:bold;
+ margin:6px;transition:.3s
+}
+.btn:hover{transform:translateY(-4px);box-shadow:0 10px 25px #06b6d455}
+
+section{padding:80px 6%;max-width:1150px;margin:auto}
+.title{text-align:center;font-size:34px;margin-bottom:40px}
+.title span{color:#67e8f9}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:20px
+}
+.card{
+ background:#ffffff0b;border:1px solid #ffffff18;
+ padding:25px;border-radius:22px;
+ backdrop-filter:blur(12px);
+ transition:.35s;
+}
+.card:hover{transform:translateY(-8px);border-color:#67e8f9}
+.card h3{margin:12px 0;color:#67e8f9}
+.card p{color:#cbd5e1;line-height:1.6}
+.icon{font-size:38px}
+
+.timeline{border-left:2px solid #22d3ee;padding-left:25px}
+.step{margin-bottom:30px;position:relative}
+.step:before{
+ content:"";position:absolute;left:-34px;top:5px;
+ width:15px;height:15px;border-radius:50%;
+ background:#22d3ee;box-shadow:0 0 15px #22d3ee
+}
+.step h3{color:#67e8f9;margin-bottom:7px}
+
+.skill{
+ margin:18px 0;color:#cbd5e1
+}
+.bar{height:9px;background:#ffffff15;border-radius:10px;margin-top:8px}
+.fill{
+ height:100%;border-radius:10px;
+ background:linear-gradient(90deg,#22d3ee,#8b5cf6)
+}
+
+.quote{
+ text-align:center;font-size:22px;line-height:1.6;
+ background:#ffffff0b;padding:35px;border-radius:25px
+}
+footer{
+ text-align:center;padding:35px;color:#94a3b8;
+ border-top:1px solid #ffffff12
+}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+
+@keyframes up{
+ from{opacity:0;transform:translateY(35px)}
+ to{opacity:1;transform:none}
+}
+
+@media(max-width:650px){
+ nav{padding:13px 5%}
+ nav .links{display:none}
+ section{padding:65px 5%}
+ .title{font-size:29px}
+ .hero p{font-size:16px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <div class="logo">MANAS<span style="color:#a78bfa">.</span></div>
+ <div class="links">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#journey">Journey</a>
+ </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+ <div class="hero-box">
+  <div class="avatar">🚀</div>
+  <p style="color:#67e8f9">STUDENT • LEARNER • CREATOR</p>
+  <h1>Hello, I'm <span>Manas</span> Pandey</h1>
+  <p>
+   A curious Class 6 student who loves learning new things,
+   exploring technology, creating projects and discovering
+   how the world works.
+  </p>
+  <a class="btn" href="#about">Explore My Journey ↓</a>
+ </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+ <h2 class="title">About <span>Me</span></h2>
+ <div class="grid">
+  <div class="card">
+   <div class="icon">🎓</div>
+   <h3>My School</h3>
+   <p>
+    <b>Gurukul Montessori School</b><br>
+    Shantipuram, Pahpahamu<br>
+    ICSE Board
+   </p>
+  </div>
+
+  <div class="card">
+   <div class="icon">📚</div>
+   <h3>My Class</h3>
+   <p>
+    I am currently studying in <b>Class 6</b>.
+    I enjoy learning through experiments,
+    projects and practical activities.
+   </p>
+  </div>
+
+  <div class="card">
+   <div class="icon">💡</div>
+   <h3>My Mindset</h3>
+   <p>
+    I believe every new skill is an opportunity
+    to become better, more creative and more confident.
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- INTERESTS -->
+<section class="reveal">
+ <h2 class="title">My <span>Interests</span></h2>
+ <div class="grid">
+  <div class="card"><div class="icon">💻</div><h3>Technology</h3><p>Exploring computers, coding and digital creativity.</p></div>
+  <div class="card"><div class="icon">🔬</div><h3>Science</h3><p>Understanding how things work through experiments and curiosity.</p></div>
+  <div class="card"><div class="icon">🎨</div><h3>Creativity</h3><p>Designing, creating and expressing new ideas.</p></div>
+  <div class="card"><div class="icon">🏆</div><h3>Challenges</h3><p>I enjoy challenges that help me learn something new.</p></div>
+ </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+ <h2 class="title">My <span>Skills</span></h2>
+
+ <div class="card">
+  <div class="skill">Computer & Digital Skills
+   <div class="bar"><div class="fill" style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">Creative Thinking
+   <div class="bar"><div class="fill" style="width:90%"></div></div>
+  </div>
+
+  <div class="skill">Problem Solving
+   <div class="bar"><div class="fill" style="width:82%"></div></div>
+  </div>
+
+  <div class="skill">Learning & Exploration
+   <div class="bar"><div class="fill" style="width:95%"></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+ <h2 class="title">My <span>Projects</span></h2>
+
+ <div class="grid">
+  <div class="card">
+   <div class="icon">🎮</div>
+   <h3>My First Game</h3>
+   <p>
+    Exploring the world of game design by creating
+    simple interactive game ideas.
+   </p>
+  </div>
+
+  <div class="card">
+   <div class="icon">🌐</div>
+   <h3>My Web Project</h3>
+   <p>
+    Learning how websites are designed using
+    HTML, CSS and JavaScript.
+   </p>
+  </div>
+
+  <div class="card">
+   <div class="icon">🧪</div>
+   <h3>Science Exploration</h3>
+   <p>
+    Recording interesting science concepts,
+    experiments and observations.
+   </p>
+  </div>
+ </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="reveal">
+ <h2 class="title">My Learning <span>Journey</span></h2>
+
+ <div class="timeline">
+  <div class="step">
+   <h3>📖 School Learning</h3>
+   <p>Building a strong foundation through classroom learning and activities.</p>
+  </div>
+
+  <div class="step">
+   <h3>💻 Technology</h3>
+   <p>Discovering computers, digital tools and programming concepts.</p>
+  </div>
+
+  <div class="step">
+   <h3>🚀 Projects</h3>
+   <p>Turning ideas into small creative projects and experiments.</p>
+  </div>
+
+  <div class="step">
+   <h3>🌟 Future</h3>
+   <p>Continuing to learn, experiment and develop new skills.</p>
+  </div>
+ </div>
+</section>
+
+<!-- HOBBIES -->
+<section class="reveal">
+ <h2 class="title">Beyond <span>Studies</span></h2>
+
+ <div class="grid">
+  <div class="card"><div class="icon">⚽</div><h3>Sports</h3><p>Staying active and enjoying outdoor activities.</p></div>
+  <div class="card"><div class="icon">🎮</div><h3>Games</h3><p>Enjoying games and understanding how they are created.</p></div>
+  <div class="card"><div class="icon">📚</div><h3>Reading</h3><p>Discovering interesting stories, facts and ideas.</p></div>
+  <div class="card"><div class="icon">🎵</div><h3>Music</h3><p>Enjoying music and creative activities.</p></div>
+ </div>
+</section>
+
+<!-- GOALS -->
+<section class="reveal">
+ <h2 class="title">My <span>Dreams & Goals</span></h2>
+
+ <div class="quote">
+  “Learn something new every day,
+  turn ideas into reality,
+  and never stop asking <b>WHY?</b>”
+ </div>
+
+ <br>
+
+ <div class="grid">
+  <div class="card">
+   <h3>🎯 Short-Term Goal</h3>
+   <p>Improve my knowledge, creativity and problem-solving skills.</p>
+  </div>
+
+  <div class="card">
+   <h3>🚀 Long-Term Goal</h3>
+   <p>Build innovative technology and create something useful for people.</p>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="reveal">
+ <h2 class="title">Let's <span>Connect</span></h2>
+ <div class="card" style="text-align:center">
+  <div class="icon">👋</div>
+  <h3>Thanks for visiting!</h3>
+  <p>
+   This portfolio represents my learning journey,
+   interests and dreams. More projects coming soon!
+  </p>
+  <a class="btn" href="#top">Back to Top ↑</a>
+ </div>
+</section>
+
+<footer>
+ © 2026 Manas Pandey • Student Portfolio<br>
+ <small>Learning • Creating • Exploring • Growing 🚀</small>
+</footer>
+
+<script>
+const items=document.querySelectorAll(".reveal");
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add("show");
+ });
+},{threshold:.15});
+
+items.forEach(i=>observer.observe(i));
+</script>
+
+</body>
+</html>
